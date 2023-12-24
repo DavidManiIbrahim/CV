@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signin</title>
+    <style>
+      *{
+        box-sizing: border-box;
+      }
+      body{
+        background-color: #23242a;
+      }
+      .box {
+        border: 2px solid;
+        background-color: #1c1c1c;
+        width:500px;
+        height: 500px;
+        border-radius: 10px;
+        margin: auto;
+        box-shadow: inset 2px solid;
+        margin: auto;
+        overflow: hidden;
+      }
+      .box::before{
+        content: "";
+        position: absolute;
+        
+        width: 380px;
+        height: 420px;
+        background-color: linear-gradient(0deg, transparent, transparent, #45f3ff, #45f3ff, #45f3ff);
+        z-index: 1;
+        transform-origin: bottom;
+        animation: animate 6s infinite;
+      }
+      .box::after{
+        content: "";
+        position: absolute;
+        
+        width: 380px;
+        height: 420px;
+        background-color: linear-gradient(0deg, transparent, transparent, #45f3ff, #45f3ff, #45f3ff);
+        z-index: 1;
+        transform-origin: bottom;
+        animation: animate 6s infinite;
+      }
+      @keyframes animate{
+        0%
+        {
+          transform: rotate(0deg);
+        }
+        100%
+        {
+          transform: rotate(360deg);
+        }
+      }
+      h2{
+        color: aqua;
+        text-align: center;
+        margin-top: 100px;
+      }
+      input{
+        border: none;
+        color: #1c1c1c;
+        padding: 15px;
+        font-size: 19px;
+        width: 300px;
+        border-radius: 5px;
+        margin-left: 60px;
+        background-color: #23242a;
+        border-bottom: 1px solid aqua;
+        
+        
+      }
+      input:hover{
+        transition: 2s;
+        background-color: aqua;
+      }
+      /*label{
+        color: aqua;
+        margin-left: 60px;
+        font-size: 20px;
+        font-weight: 500;
+      }*/
+      button{
+        
+        padding: 12px;
+        width: 100px;
+        border-radius: 5px;
+        margin-left: 60px;
+        font-weight: bold;
+        font-size: 15px;
+        background-color: aqua;
+      }
+      .signup a{
+        float: right;
+        margin-right: 120px;
+        margin-top: -35px;
+        color: aqua;
+        text-decoration: none;
+      }
+      .password a{
+        margin-left: 60px;
+        margin-top: 2px;
+        color: grey;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h2>Sign in</h2>
+      <!--<label for="Username">Username:</label>-->
+      <br>
+      <input type="text" placeholder="Username" required/>
+      <br>
+      <br>
+      <!--<label for="Password">Password:</label>-->
+      <br>
+      <input type="password" placeholder="Password" required/>
+      <p class="password">
+        <a href="">forgot password</a></p>
+      <p class="signup">
+        <a href="">Signup</a></p>
+      <button>Login</button>
+    </div>
+  </body>
+</html>
